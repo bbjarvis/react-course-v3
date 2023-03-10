@@ -1,5 +1,17 @@
-const ToggleChallenge = () => {
-  return <h2>toggle challenge</h2>;
-};
+import { useEffect, useState } from 'react'
 
-export default ToggleChallenge;
+const ToggleChallenge = () => {
+  const [toggle, setToggle] = useState(false)
+  const message = 'hello world'
+
+  return (
+    <div>
+      <button className='btn' onClick={() => setToggle(!toggle)}>
+        Toggle Alert
+      </button>
+      {toggle && <div className='alert alert-danger'>{message}</div>}
+    </div>
+  )
+}
+
+export default ToggleChallenge
