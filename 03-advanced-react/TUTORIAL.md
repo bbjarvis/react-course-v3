@@ -1895,6 +1895,8 @@ import Starter from './tutorial/06-forms/starter/05-form-data.jsx';
 - a great solution when you have bunch of inputs
 - inputs must have name attribute
 
+The FormData interface provides a way to construct a set of key/value pairs representing form fields and their values, which can be sent using the fetch() or XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to "multipart/form-data".
+
 ```js
 import { useState } from 'react';
 
@@ -1957,7 +1959,13 @@ const UncontrolledInputs = () => {
 export default UncontrolledInputs;
 ```
 
+- e.currentTarget
+
+In React, e.currentTarget returns the DOM element that triggered the event.
+
 - Object From Entries
+
+The Object.fromEntries() static method transforms a list of key-value pairs into an object.
 
 ```js
 const entries = new Map([
@@ -1970,6 +1978,10 @@ const obj = Object.fromEntries(entries);
 console.log(obj);
 // Expected output: Object { foo: "bar", baz: 42 }
 ```
+
+- reset()
+
+The reset() method is a built-in method in HTML that can be used to reset all form controls to their initial values. When this method is called on a form element, it will clear any user-entered data and reset the values of all form elements to their default values.
 
 #### useRef
 
@@ -2257,7 +2269,7 @@ export default UserContainer;
 
 #### Setup Global Context
 
-final code in the repo under z-assets
+final code in the repo under w-assets
 
 - create new VITE project
 
