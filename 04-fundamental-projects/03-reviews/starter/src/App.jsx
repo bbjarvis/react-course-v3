@@ -1,4 +1,14 @@
 const App = () => {
-  return <h2>Reviews Starter</h2>;
-};
-export default App;
+  return (
+    <main>
+      <section>
+        <h2 className='title'>
+          Our Reviews
+          <h3 className='underline'></h3>
+        </h2>
+      </section>
+      <container className='container'></container>
+    </main>
+  )
+}
+export default App
