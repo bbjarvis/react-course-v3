@@ -17,7 +17,7 @@ const App = () => {
           <p className='job'>{reviews[0].job}</p>
           <p className='info'>{reviews[0].text}</p>
         </div>
-        <div>
+        <div className='btn-container'>
           <button className='prev-btn'>
             <FaChevronLeft />
           </button>
@@ -25,6 +25,7 @@ const App = () => {
             <FaChevronRight />
           </button>
         </div>
+
         <button className='btn'>
           <div className='btn-hover'>Surprise Me</div>
         </button>
