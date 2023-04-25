@@ -52,8 +52,8 @@ const App = () => {
           </button>
         </div>
 
-        <button className='btn' onClick={randPerson}>
-          <div className='btn-hover'>Surprise Me</div>
+        <button className='btn btn-hipster' onClick={randPerson}>
+          Surprise Me
         </button>
       </article>
     </main>

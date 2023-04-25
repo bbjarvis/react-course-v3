@@ -265,10 +265,12 @@ main {
   max-width: var(--fixed-width);
   background: var(--white);
   padding: 1.5rem 2rem;
+  border-radius: var(--borderRadius);
   box-shadow: var(--shadow-1);
   transition: var(--transition);
   text-align: center;
 }
+
 .review:hover {
   box-shadow: var(--shadow-3);
 }
@@ -295,12 +297,11 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  width: 2.5rem;
   height: 2.5rem;
+  width: 2.5rem;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  transform: translateY(25%);
   background-color: var(--primary-500);
   color: var(--white);
 }
@@ -315,9 +316,11 @@ main {
   top: -0.25rem;
   right: -0.5rem;
 }
+
 .author {
   margin-bottom: 0.5rem;
 }
+
 .job {
   text-transform: uppercase;
   color: var(--primary-500);
@@ -332,9 +335,11 @@ main {
   line-height: 1.5;
   color: var(--grey-600);
 }
+
 .btn-container {
   margin-bottom: 1rem;
 }
+
 .prev-btn,
 .next-btn {
   color: var(--primary-700);
