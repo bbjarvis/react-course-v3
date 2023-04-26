@@ -13,23 +13,7 @@ const App = () => {
     <main>
       <section className='container'>
         <h1>Questions</h1>
-
-        {questions.map((question) => {
-          return (
-            <div className='question'>
-              <header>
-                <h5>{question.title}</h5>
-                <button
-                  className='question-btn'
-                  onClick={() => setShowInfo(question.id)}
-                >
-                  {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
-                </button>
-              </header>
-              {showInfo ? <p>{question.info}</p> : <></>}
-            </div>
-          )
-        })}
+        <Questions questions={questions} />
       </section>
     </main>
   )
