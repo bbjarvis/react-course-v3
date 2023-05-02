@@ -13,7 +13,7 @@ const App = () => {
         </div>
         <container className='btn-container'>
           {categories.map((category) => {
-            return <button>{category}</button>
+            return <button className='btn'>{category}</button>
           })}
         </container>
       </section>
