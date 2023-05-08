@@ -18,7 +18,18 @@ const App = () => {
           })}
         </container>
       </section>
-      <section className='section-center'>{menuItems[0].title}</section>
+      <section className='section-center'>
+        <article className='menu-item'>
+          <img src={menuItems[0].img} className='img'></img>
+          <div className='item-info'>
+            <header>
+              <h5>{menuItems[0].title}</h5>
+              <span className='item-price'>{menuItems[0].price}</span>
+            </header>
+            <p className='item-text'>{menuItems[0].desc}</p>
+          </div>
+        </article>
+      </section>
     </main>
   )
 }
