@@ -4,6 +4,7 @@ const allCategories = ['all', ...new Set(items.map((item) => item.category))]
 
 const App = () => {
   const [categories, setCategories] = useState(allCategories)
+  const [menuItems, setMenuItems] = useState(items)
   return (
     <main>
       <section classname='menu'>
@@ -17,6 +18,7 @@ const App = () => {
           })}
         </container>
       </section>
+      <section className='section-center'>{menuItems[0].title}</section>
     </main>
   )
 }
