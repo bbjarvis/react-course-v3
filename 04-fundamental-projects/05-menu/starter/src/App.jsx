@@ -5,6 +5,8 @@ const allCategories = ['all', ...new Set(items.map((item) => item.category))]
 const App = () => {
   const [categories, setCategories] = useState(allCategories)
   const [menuItems, setMenuItems] = useState(items)
+  const [menu, setMenu] = useState('all')
+
   return (
     <main>
       <section classname='menu'>
@@ -14,24 +16,44 @@ const App = () => {
         </div>
         <container className='btn-container'>
           {categories.map((category) => {
-            return <button className='btn'>{category}</button>
+            return (
+              <button className='btn' onClick={() => setMenu(category)}>
+                {category}
+              </button>
+            )
           })}
         </container>
       </section>
       <section className='section-center'>
         {menuItems.map((menuItem) => {
-          return (
-            <article className='menu-item'>
-              <img src={menuItem.img} className='img'></img>
-              <div className='item-info'>
-                <header>
-                  <h5>{menuItems[0].title}</h5>
-                  <span className='item-price'>{menuItem.price}</span>
-                </header>
-                <p className='item-text'>{menuItem.desc}</p>
-              </div>
-            </article>
-          )
+          if (menu === 'all') {
+            return (
+              <article className='menu-item'>
+                <img src={menuItem.img} className='img'></img>
+                <div className='item-info'>
+                  <header>
+                    <h5>{menuItems[0].title}</h5>
+                    <span className='item-price'>{menuItem.price}</span>
+                  </header>
+                  <p className='item-text'>{menuItem.desc}</p>
+                </div>
+              </article>
+            )
+          }
+          if (menu === menuItem.category) {
+            return (
+              <article className='menu-item'>
+                <img src={menuItem.img} className='img'></img>
+                <div className='item-info'>
+                  <header>
+                    <h5>{menuItems[0].title}</h5>
+                    <span className='item-price'>{menuItem.price}</span>
+                  </header>
+                  <p className='item-text'>{menuItem.desc}</p>
+                </div>
+              </article>
+            )
+          }
         })}
       </section>
     </main>
