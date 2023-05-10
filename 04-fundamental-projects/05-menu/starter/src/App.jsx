@@ -8,7 +8,6 @@ const App = () => {
   const [categories, setCategories] = useState(allCategories)
   const [menuItems, setMenuItems] = useState(items)
   const [menu, setMenu] = useState('all')
-  console.log(menu)
 
   return (
     <main>

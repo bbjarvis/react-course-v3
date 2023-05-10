@@ -7,7 +7,7 @@ const Categories = ({ categories, setMenu }) => {
         <h2>Our Menu</h2>
         <div className='title-underline'></div>
       </div>
-      <container className='btn-container'>
+      <article className='btn-container'>
         {categories.map((category, index) => {
           return (
             <button
@@ -19,7 +19,7 @@ const Categories = ({ categories, setMenu }) => {
             </button>
           )
         })}
-      </container>
+      </article>
     </section>
   )
 }
