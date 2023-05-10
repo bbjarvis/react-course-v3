@@ -8,12 +8,12 @@ const Categories = ({ categories, setMenu }) => {
         <div className='title-underline'></div>
       </div>
       <container className='btn-container'>
-        {categories.map((category) => {
+        {categories.map((category, index) => {
           return (
             <button
               className='btn'
               onClick={() => setMenu(category)}
-              key={category.id}
+              key={index}
             >
               {category}
             </button>
