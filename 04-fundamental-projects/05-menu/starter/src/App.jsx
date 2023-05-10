@@ -1,29 +1,18 @@
 import React, { useState } from 'react'
 import items from './data'
+import Categories from './Categories'
 const allCategories = ['all', ...new Set(items.map((item) => item.category))]
 
 const App = () => {
   const [categories, setCategories] = useState(allCategories)
   const [menuItems, setMenuItems] = useState(items)
   const [menu, setMenu] = useState('all')
+  console.log(menu)
 
   return (
     <main>
-      <section classname='menu'>
-        <div className='title'>
-          <h2>Our Menu</h2>
-          <div className='title-underline'></div>
-        </div>
-        <container className='btn-container'>
-          {categories.map((category) => {
-            return (
-              <button className='btn' onClick={() => setMenu(category)}>
-                {category}
-              </button>
-            )
-          })}
-        </container>
-      </section>
+      <Categories categories={categories} setMenu={setMenu} />
+
       <section className='section-center'>
         {menuItems.map((menuItem) => {
           if (menu === 'all') {
@@ -32,7 +21,7 @@ const App = () => {
                 <img src={menuItem.img} className='img'></img>
                 <div className='item-info'>
                   <header>
-                    <h5>{menuItems[0].title}</h5>
+                    <h5>{menuItem.title}</h5>
                     <span className='item-price'>{menuItem.price}</span>
                   </header>
                   <p className='item-text'>{menuItem.desc}</p>
@@ -46,7 +35,7 @@ const App = () => {
                 <img src={menuItem.img} className='img'></img>
                 <div className='item-info'>
                   <header>
-                    <h5>{menuItems[0].title}</h5>
+                    <h5>{menuItem.title}</h5>
                     <span className='item-price'>{menuItem.price}</span>
                   </header>
                   <p className='item-text'>{menuItem.desc}</p>
