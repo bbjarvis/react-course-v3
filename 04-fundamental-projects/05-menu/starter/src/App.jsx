@@ -10,7 +10,7 @@ const App = () => {
   const [menu, setMenu] = useState('all')
 
   return (
-    <main>
+    <main className='menu'>
       <Categories categories={categories} setMenu={setMenu} />
       <Menu menu={menu} menuItems={menuItems} />
     </main>
